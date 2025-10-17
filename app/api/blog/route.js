@@ -2,6 +2,21 @@ import { ConnectDB } from "@/lib/config/db";
 import BlogModel from "@/lib/models/BlogModel";
 import { writeFile } from "fs/promises";
 import { NextResponse } from "next/server";
+//API END POINT TO GET ALL BLOGS
+export async function GET() {
+  try {
+    await ConnectDB();
+    const blogs = await BlogModel.find({}).sort({ createdAt: -1 });
+    return NextResponse.json({blogs});
+  } catch (err) {
+    console.error("❌ GET /api/blog Error:", err);
+    return NextResponse.json(
+      { error: "Failed to fetch blogs" },
+      { status: 500 }
+    );
+  }
+}
+//API END POINT UPLOAD BLOGS
 export async function POST(request) {
   try {
     await ConnectDB();
