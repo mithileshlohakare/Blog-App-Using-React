@@ -40,16 +40,8 @@ const page = ({params}) => {
     </div>
     <div className='mx-5 max-w-[800px] md:mx-auto mt-[-100px] mb-10'>
       <Image className='border-4 border-white' src={data.image} width={1280} height={720} alt=''/>
-      <h1 className='my-8 text-[26px] font-semibold'>Introduction:</h1>
-      <p>{data.description}</p>
-      <h3 className='my-5 text-[18px] font-semibold'>Step1 : Goal Setting and Self Reflection</h3>
-      <p className='my-3  '>The first and most important step toward personal and professional growth is Goal Setting and Self-Reflection. It helps in understanding one’s current position, strengths, weaknesses, interests, and future aspirations. Before starting any new journey, it is essential to have a clear vision of what we want to achieve and why.</p>
-      <h3 className='my-5 text-[18px] font-semibold'>Step2 : Goal Setting and Self Reflection</h3>
-      <p className='my-3  '>The first and most important step toward personal and professional growth is Goal Setting and Self-Reflection. It helps in understanding one’s current position, strengths, weaknesses, interests, and future aspirations. Before starting any new journey, it is essential to have a clear vision of what we want to achieve and why.</p>
-      <h3 className='my-5 text-[18px] font-semibold'>Step3 : Goal Setting and Self Reflection</h3>
-      <p className='my-3  '>The first and most important step toward personal and professional growth is Goal Setting and Self-Reflection. It helps in understanding one’s current position, strengths, weaknesses, interests, and future aspirations. Before starting any new journey, it is essential to have a clear vision of what we want to achieve and why.</p>
-      <h3 className='my-5 text-[18px] font-semibold'>Conclusion</h3>
-      <p className='my-3  '>In conclusion, this step helped me create a clear roadmap for my journey. By setting SMART (Specific, Measurable, Achievable, Relevant, and Time-bound) goals and reflecting on my personal growth, I have developed a focused mindset to achieve both personal and professional excellence.</p>
+      <div className='blog-content' dangerouslySetInnerHTML={{__html:data.description}}></div>
+     
       <div className='my-24 '>
         <p className='text-black font-semibold my-4'>Share this article on social media</p>
         <div className='flex'>
