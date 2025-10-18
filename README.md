@@ -25,9 +25,6 @@ Make sure the following are installed on your system:
 - **Admin Dashboard:** http://localhost:3000/admin
 - **API Endpoint Check:** http://localhost:3000/api/blog
 
-## 🚀 Live Demo
-👉 **Check out the live version here:** https://next-blog-app-sigma-two.vercel.app/
-
 ## 💡 Features
 - Create and edit blog posts
 - Read and discover trending blogs
